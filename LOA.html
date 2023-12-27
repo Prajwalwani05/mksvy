@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOA Details</title>
+      <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./css/dataTables.min.css" />
+ 
+    <link rel="stylesheet" href="./css/dataTables.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="./css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  
+<style>
+    .form-control_new {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        background-color: whitesmoke;
+        background-clip: padding-box;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .form-Calendar_new {
+        --bs-form-select-bg-img: url("/img/svg/icon-calendar-boxed.svg");
+        display: block;
+        width: 100%;
+        padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        background-color: whitesmoke; /*#eff0f6;*/
+        background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+        background-repeat: no-repeat;
+        background-position: right 0.71rem center;
+        background-size: 20px 18px;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .form-select_new {
+        --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        display: block;
+        width: 100%;
+        padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        background-color: whitesmoke; /*#eff0f6;*/
+        background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 16px 12px;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .sub-title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.42;
+        color: #2f4858;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="layer"></div>
+    <!-- ! Body -->
+    <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+    <div class="page-flex">
+      <!-- ! Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-start">
+          <div class="sidebar-head">
+            <a href="home.html" class="logo-wrapper" title="Home">
+              <div class="logo-img">
+                <img src="img/logo-main.png" alt="" />
+              </div>
+              <!--<span class="sr-only">Home</span>-->
+              <!--<span class="icon logo" aria-hidden="true"></span>-->
+              <!--<div class="logo-text">-->
+              <!--    <span class="logo-title">MKSVY</span>-->
+              <!--    <span class="logo-subtitle">Dashboard</span> -->
+              <!--</div>-->
+            </a>
+            <button
+              class="sidebar-toggle transparent-btn"
+              title="Menu"
+              type="button"
+            >
+              <span class="sr-only">Toggle menu</span>
+              <span class="icon menu-toggle" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="sidebar-body">
+            <ul class="sidebar-body-menu">
+              <li>
+                <a class="hovering" href="home.html"
+                  ><i class="icon fa-solid fa-house"></i>Dashboard</a
+                >
+              </li>
+              <div class="reportCollapse">
+                <li class="reports">
+                  <a class="menuLinks" href="javascript:void(0)">
+                    <i class="icon fa-solid fa-layer-group"></i>User Master</a>
+                </li>
+                <div class="arrows">
+                  <i
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-left arrowLeft"
+                  ></i>
+                  <i
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-down arrowDown"
+                  ></i>
+                </div>
+              </div>
+              <div class="uList" style="padding-left: 22px;">
+                <ul  class="reportList rr" style="display: none;">
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >New User</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Role Mapping</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="reportCollapse">
+                <li class="reports">
+                  <a class="menuLinks" href="javascript:void(0)">
+                  <i id="reportModal" class="icon fa-solid fa-list"></i>Reports</a>
+                </li>
+                <div class="arrows">
+                  <i
+                    
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-left arrowLeft"
+                  ></i>
+                  <i
+                   
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-down arrowDown"
+                  ></i>
+                </div>
+              </div>
+              <div class="uList" style="padding-left: 22px;">
+                <ul  class="reportList rr" style="display: none;">
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Report 1</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Report 2</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;"class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Report 3</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Report 4</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Report 5</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="reportCollapse">
+                <li class="reports">
+                  <a class="menuLinks" href="javascript:void(0)">
+                    <i class="icon fa-solid fa-file-contract"></i>SPVs Tendering
+                  Milestones</a>
+                </li>
+                <div class="arrows">
+                  <i
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-left arrowLeft"
+                  ></i>
+                  <i
+                    style="color: #ffffff; cursor: pointer; font-size: 13px"
+                    class="fa-solid fa-angle-down arrowDown"
+                  ></i>
+                </div>
+              </div>
+              <div class="uList" style="padding-left: 22px;">
+                <ul  class="reportList rr" style="display: none;">
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Cluster Summary</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Letter Of Intent (LOI)</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="./mercAdoptionIndex.html"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >MERC Tariff Adoption Order</a
+                    >
+                  </li>
+                  <li class="hovering">
+                    <a style="font-size: 14px;" class="menuLinks" href="./LOAIndex.html"
+                      ><i
+                        style="color: #ffffffa2; font-size: 12px"
+                        class="icon fa-solid fa-circle"
+                      ></i
+                      >Letter Of Award (LOA)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <li>
+                <a class="hovering" href="javascript:void(0)"
+                  ><i class="icon fa-solid fa-gears"></i>System Strengthening</a
+                >
+              </li>
+              <li>
+                <a class="hovering" href="javascript:void(0)"
+                  ><i class="icon fa-solid fa-layer-group"></i>SPDs
+                  Implementation Tracking</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+
+      <div class="main-wrapper">
+        <!-- ! Main nav -->
+        <nav class="main-nav--bg">
+          <div class="container main-nav">
+            <div class="main-nav-start">
+              <div class="search-wrapper">
+                <i data-feather="search" aria-hidden="true"></i>
+                <input type="text" placeholder="Enter keywords ..." required />
+              </div>
+            </div>
+            <div class="main-nav-end">
+              <button
+                class="sidebar-toggle transparent-btn"
+                title="Menu"
+                type="button"
+              >
+                <span class="sr-only">Toggle menu</span>
+                <span class="icon menu-toggle--gray" aria-hidden="true"></span>
+              </button>
+              <div class="profileTheme">
+                <button
+                  class="theme-switcher gray-circle-btn"
+                  type="button"
+                  title="Switch theme"
+                >
+                  <span class="sr-only">Switch theme</span>
+                  <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+                  <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+                </button>
+                <div class="nav-user-wrapper">
+                  <button
+                    href="javascript:void(0)"
+                    class="nav-user-btn dropdown-btn"
+                    title="My profile"
+                    type="button"
+                  >
+                    <span class="sr-only">My profile</span>
+                    <span class="nav-user-img">
+                      <picture
+                        ><source
+                          srcset="./img/avatar/avatar-illustrated-02.webp"
+                          type="image/webp" />
+                        <img
+                          src="./img/avatar/avatar-illustrated-02.png"
+                          alt="User name"
+                      /></picture>
+                    </span>
+                  </button>
+                  <ul class="users-item-dropdown nav-user-dropdown dropdown">
+                    <li>
+                      <a href="javascript:void(0)">
+                        <i data-feather="user" aria-hidden="true"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <i data-feather="settings" aria-hidden="true"></i>
+                        <span>Account settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="danger" href="index.html">
+                        <i data-feather="log-out" aria-hidden="true"></i>
+                        <span>Log out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ! Main -->
+
+        <main class="main users chart-page" id="skip-target">
+            <div class="container">
+                <h3 class="main-title" style="font-size: 20px; margin-left: 20px;">
+                    LOA Details
+                  </h3>
+                  
+                <div class="card">
+                    <div class="card-body" style="margin-top:-1%">
+                        <h2 style="font-size: 16px; margin-bottom: 0;" class="main-title" >Cluster Details </h2>
+                        <hr />
+                        <div class="row stat-cards" style="margin-top:0%">
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">District Name</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value="CH. SAMBHAJINAGAR"
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">Cluster Name</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value="Cluster (i)"
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">SPD Name</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value=""
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+                   
+                        <h1 class="sub-title" style="margin-top:-1%; font-size: 16px;">RFS Details</h1>
+                        <hr />
+                        <!-- new field added -->
+    
+                        <div class="row stat-cards" style="margin-top:0%">
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">RFS Number </p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value="SPV1-JLG-01"
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">Date of RFS</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value="12-10-2023"
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                              <div class="select-filed-holder">
+                                  <label class="form-label-wrapper">
+                                      <p class="form-label" style="margin-left: 1%;">RFS Online Submission Date</p>
+                                      <input
+                                      autocomplete="off"
+                                      class="form-control_new input-icon edits"
+                                      type="text"
+                                      style="font-size: 14px;"
+                                      value="12-10-2023"
+                                      readonly
+                                    />
+                                  </label>
+                              </div>
+                          </div>
+                        </div>
+
+                        
+                        <h1 class="sub-title" style="margin-top:-1%; font-size: 16px;">Project Capacity Details</h1>
+                        <hr />
+                        <div class="row stat-cards" style="margin-top:0%">
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">Base Capacity</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value=""
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">Green Shoe Capacity</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value=""
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">CFA Capacity</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value=""
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 style="font-size: 16px; margin-top:-1%; " class="main-title" >LOI Details </h2>
+                        <hr />
+                        <div class="row stat-cards" style="margin-top:0%">
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">LOI Reference No.</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value=""
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3">
+                                <div class="select-filed-holder">
+                                    <label class="form-label-wrapper">
+                                        <p class="form-label" style="margin-left: 1%;">LOI Date</p>
+                                        <input
+                                        autocomplete="off"
+                                        class="form-control_new input-icon edits"
+                                        type="text"
+                                        style="font-size: 14px;"
+                                        value="15-10-2023"
+                                        readonly
+                                      />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <h2 style="font-size: 16px; margin-top:-1%; " class="main-title" >MERC Details</h2>
+                            <hr />
+                            <div class="row stat-cards" style="margin-top:0%">
+                                <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">Issuance Case no.</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value=""
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">Issuance date</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value="25-12-2023"
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+                                <h2 style="font-size: 16px; margin-top:-1%; " class="main-title" >E-Reverse Auction Details</h2>
+                                <hr />
+                                <div class="row stat-cards" style="margin-top:0%">
+                                  <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">E-Reverse auction intimation date</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value="10-10-2023"
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="select-filed-holder">
+                                      <label class="form-label-wrapper">
+                                          <p class="form-label" style="margin-left: 1%;">E-Reverse auction result Annexure A</p>
+                                          <input
+                                          autocomplete="off"
+                                          class="form-control_new input-icon edits"
+                                          type="text"
+                                          style="font-size: 14px;"
+                                          value=""
+                                          readonly
+                                        />
+                                      </label>
+                                  </div>
+                              </div>  
+                                  
+                                    
+                            </div>
+                                <h2 style="font-size: 16px; margin-top:-1%; " class="main-title" >Bank Details</h2>
+                                <hr />
+                                <div class="row stat-cards" style="margin-top:0%">
+                                  <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">Performance Bank Guarantee Number</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value=""
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="select-filed-holder">
+                                      <label class="form-label-wrapper">
+                                          <p class="form-label" style="margin-left: 1%;">Performance Bank Guarantee Issuing Bank</p>
+                                          <input
+                                          autocomplete="off"
+                                          class="form-control_new input-icon edits"
+                                          type="text"
+                                          style="font-size: 14px;"
+                                          value=""
+                                          readonly
+                                        />
+                                      </label>
+                                  </div>
+                              </div>  
+                                  <div class="col-lg-3">
+                                        <div class="select-filed-holder">
+                                            <label class="form-label-wrapper">
+                                                <p class="form-label" style="margin-left: 1%;">Performance Bank Guarantee Amount</p>
+                                                <input
+                                                autocomplete="off"
+                                                class="form-control_new input-icon edits"
+                                                type="text"
+                                                style="font-size: 14px;"
+                                                value=""
+                                                readonly
+                                              />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                            </div>
+                            <h2 style="font-size: 16px; margin-top:-1%; " class="main-title" >LOA Details</h2>
+                                <hr />
+                                <div class="row stat-cards" style="margin-top:0%">
+                                  <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">LOA Reference No.</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value=""
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+
+                                  <div class="col-lg-3">
+                                    <div class="select-filed-holder">
+                                        <label class="form-label-wrapper">
+                                            <p class="form-label" style="margin-left: 1%;">LOA Signing Authority Name</p>
+                                            <input
+                                            autocomplete="off"
+                                            class="form-control_new input-icon edits"
+                                            type="text"
+                                            style="font-size: 14px;"
+                                            value=""
+                                            readonly
+                                          />
+                                        </label>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-3">
+                                        <div class="select-filed-holder">
+                                            <label class="form-label-wrapper">
+                                                <p class="form-label" style="margin-left: 1%;">LOA Issuance date</p>
+                                                <input
+                                                autocomplete="off"
+                                                class="form-control_new input-icon edits"
+                                                type="text"
+                                                style="font-size: 14px;"
+                                                value="30-12-2023"
+                                                readonly
+                                              />
+                                            </label>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-lg-3">
+                                        <div class="select-filed-holder">
+                                            <label class="form-label-wrapper">
+                                                <p class="form-label" style="margin-left: 1%;">LOA docuement issuance</p>
+                                                <input
+                                                autocomplete="off"
+                                                class="form-control_new input-icon edits"
+                                                type="text"
+                                                style="font-size: 14px;"
+                                                value=""
+                                                readonly
+                                              />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="select-filed-holder">
+                                            <label class="form-label-wrapper">
+                                                <p class="form-label" style="margin-left: 1%;">LOA Acceptance</p>
+                                                <input
+                                                autocomplete="off"
+                                                class="form-control_new input-icon edits"
+                                                type="text"
+                                                style="font-size: 14px;"
+                                                value=""
+                                                readonly
+                                              />
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                      <div class="select-filed-holder">
+                                          <label class="form-label-wrapper">
+                                              <p class="form-label" style="margin-left: 1%;">Approved Tariff</p>
+                                              <input
+                                              autocomplete="off"
+                                              class="form-control_new input-icon edits"
+                                              type="text"
+                                              style="font-size: 14px;"
+                                              value=""
+                                              readonly
+                                            />
+                                          </label>
+                                      </div>
+                                  </div>
+
+                                  </div>
+                                </div>
+                               <div class="mercDropdownDiv">
+                               <div>
+                                   <p class="form-label" style="font-weight: 500; font-size: 15px; margin: 0;">Satus</p>
+                                   <select class="mercDropDown">
+                                       <option class="options">Approved</option>
+                                       <option class="options">Pending</option>
+                                       <option class="options">Return</option>
+                                   </select>
+                               </div>
+                               <div class="mercBtns">
+                                <button id="backBtn" type="button" class="btn btn-danger">Back</button>
+                                <button type="button" id="saveBtn" class="btn btn-primary">Save</button>
+                               </div>
+                            </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+
+    <!-- Chart library -->
+<script src="js/jquery-3.7.0.js"></script>
+<script>
+    function return_datepicker() {
+        debugger;
+        var departure_date = $("#txtBid_Submission_Date").val();
+
+        var minimum_date = new Date();
+        minimum_date.setFullYear(minimum_date.getFullYear() - 1);
+
+        console.log("Departure date => " + departure_date);
+
+
+        $('.minDatePicker').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            startDate: departure_date,
+            toggleActive: true,
+            format: 'dd-mm-yyyy'
+        });
+    }
+</script>
+<script>
+  const backBtn = document.querySelector('#backBtn');
+  backBtn.addEventListener('click', ()=>{
+      // alert("fdgnjfg")
+      window.location.href='./LOAIndex.html';
+  })
+</script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const mode = urlParams.get('mode');
+  const btns = document.querySelector('.btns');
+  const inputs = document.querySelectorAll('input');
+  const fileUpload = document.querySelector('.fileUpload');
+  const fileText = document.querySelector(".fileText");
+  const saveBtn = document.querySelector('#saveBtn');
+
+  inputs.forEach(input =>{
+    if(mode==="edit"){
+    input.readOnly = false;
+    input.classList.add("edits");
+    saveBtn.style.display = "block";
+  }
+  else{
+    input.readOnly = true;
+    input.classList.remove("edits");
+    saveBtn.style.display = "none";
+  }
+  })
+</script>
+<script src="./plugins/chart.min.js"></script>
+<!-- Icons library -->
+<script src="plugins/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js"></script>
+
+<script src="plugins/jquery.dataTables.min.js"></script>
+<script src="plugins/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

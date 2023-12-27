@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKSVY</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/dataTables.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="layer"></div>
+    <!-- ! Body -->
+    <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+    <div class="page-flex">
+        <!-- ! Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-start">
+                <div class="sidebar-head">
+                    <a href="javascript:void(0)" class="logo-wrapper" title="Home">
+                        <span class="sr-only">Home</span>
+                        <span class="icon logo" aria-hidden="true"></span>
+                        <div class="logo-text">
+                            <span class="logo-title">MKSVY</span>
+                            <!-- <span class="logo-subtitle">Dashboard</span> -->
+                        </div>
+
+                    </a>
+                    <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                        <span class="sr-only">Toggle menu</span>
+                        <span class="icon menu-toggle" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="sidebar-body">
+                    <ul class="sidebar-body-menu">
+                        <li>
+                            <a class="" href="index.html"><i class="icon fa-solid fa-house"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="" href="javascript:void(0)"><i class="icon fa-solid fa-list"></i>Reports</a>
+                        </li>
+                        <li>
+                            <a class="" href="javascript:void(0)"><i class="icon fa-solid fa-gears"></i>System
+                                Strenethinng</a>
+                        </li>
+                        <li>
+                            <a class="" href="javascript:void(0)"><i class="icon fa-solid fa-file-contract"></i>SPVs
+                                Tendering Milestones</a>
+                        </li>
+                        <li>
+                            <a class="" href="javascript:void(0)"><i class="icon fa-solid fa-layer-group"></i>SPDs
+                                Implementation Tracking</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <div class="main-wrapper">
+            <!-- ! Main nav -->
+            <nav class="main-nav--bg">
+                <div class="container main-nav">
+                    <div class="main-nav-start">
+                        <div class="search-wrapper">
+                            <i data-feather="search" aria-hidden="true"></i>
+                            <input type="text" placeholder="Enter keywords ..." required>
+                        </div>
+                    </div>
+                    <div class="main-nav-end">
+                        <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                            <span class="sr-only">Toggle menu</span>
+                            <span class="icon menu-toggle--gray" aria-hidden="true"></span>
+                        </button>
+                        <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
+                            <span class="sr-only">Switch theme</span>
+                            <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+                            <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+                        </button>
+                        <div class="nav-user-wrapper">
+                            <button href="javascript:void(0)" class="nav-user-btn dropdown-btn" title="My profile"
+                                type="button">
+                                <span class="sr-only">My profile</span>
+                                <span class="nav-user-img">
+                                    <picture>
+                                        <source srcset="./img/avatar/avatar-illustrated-02.webp" type="image/webp"><img
+                                            src="./img/avatar/avatar-illustrated-02.png" alt="User name">
+                                    </picture>
+                                </span>
+                            </button>
+                            <ul class="users-item-dropdown nav-user-dropdown dropdown">
+                                <li><a href="javascript:void(0)">
+                                        <i data-feather="user" aria-hidden="true"></i>
+                                        <span>Profile</span>
+                                    </a></li>
+                                <li><a href="javascript:void(0)">
+                                        <i data-feather="settings" aria-hidden="true"></i>
+                                        <span>Account settings</span>
+                                    </a></li>
+                                <li><a class="danger" href="javascript:void(0)">
+                                        <i data-feather="log-out" aria-hidden="true"></i>
+                                        <span>Log out</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- ! Main -->
+            <main class="main users chart-page" id="skip-target">
+                <div class="container">
+                    <h2 class="main-title">Land Details for Substation : 304006 - 33 KV ARNI</h2>
+                    <div class="row stat-cards mb-5">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body table-responsive">
+                                  <table id="tablelist" class="table-bordered  table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Land Type</th>
+                                            <th>Land Owner</th>
+                                            <th>Water Source</th>
+                                            <th>Mobile No.</th>
+                                            <th>Taluka</th>
+                                            <th>Village</th>
+                                            <th>Gram Panchayat</th>
+                                            <th>Survey No.</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                            <th>Area (Acres)</th>
+                                            <th>Aerial Dist. (KM)</th>
+                                            <th>Proposal Send To Collector</th>
+                                            <th>JM Land Status</th>
+                                            <th>Land Lease</th>
+                                            <th>TILR NOC</th>
+                                            <th>ZP NOC</th>
+                                            <th>Rehibili NOC</th>
+                                            <th>Forest NOC</th>
+                                            <th>TP NOC</th>
+                                            <th>Irrigation NOC</th>
+                                            <th>Mining NOC</th>
+                                            <th>PWD NOC</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Private</td>
+                                            <td>Abhay Shivdas Nilawar</td>
+                                            <td></td>
+                                            <td>9970656135</td>
+                                            <td>Ami</td>
+                                            <td>Ami</td>
+                                            <td>ARNI</td>
+                                            <td>130/2, 127/1</td>
+                                            <td>20.048082</td>
+                                            <td>77.9419175</td>
+                                            <td>11</td>
+                                            <td>4</td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                        </tr> 
+                                        <tr>
+                                            <td>Private</td>
+                                            <td>Narayan Bhaurao Kadu</td>
+                                            <td>Y</td>
+                                            <td>9284757507</td>
+                                            <td>Ami</td>
+                                            <td>Amani</td>
+                                            <td></td>
+                                            <td>37/1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>5</td>
+                                            <td>8760</td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                            <td><i class="fa-solid fa-xmark xmark-icon"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Govemment</td>
+                                            <td>Govemment Land</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Ami</td>
+                                            <td>Jawala</td>
+                                            <td></td>
+                                            <td>515</td>
+                                            <td>20.135586</td>
+                                            <td>77.946213</td>
+                                            <td>44</td>
+                                            <td>6</td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                            <td><i class="fa-solid fa-check check-icon"></i></td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row stat-cards">
+                        <div class="col-lg-12">
+                            <div class="view-details">
+                                <a href="substation-list.html" class="primary-default-btn"> Back To Substation List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ! Footer -->
+            <footer class="footer">
+                <div class="container footer--flex">
+                    <div class="footer-start">
+                        <p>2023 © MKSVY </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Chart library -->
+    <script src="js/jquery-3.7.0.js"></script>
+
+    <script src="./plugins/chart.min.js"></script>
+    <!-- Icons library -->
+    <script src="plugins/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js"></script>
+
+    <script src="plugins/jquery.dataTables.min.js"></script>
+    <script src="plugins/dataTables.bootstrap5.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+
+    <script>
+        (function ($) {
+            // To apply datatable
+            new DataTable('#tablelist', {
+                info: true,
+                ordering: true,
+                paging: true
+            });
+        }(jQuery));
+    </script>
+
+</body>
+
+</html>

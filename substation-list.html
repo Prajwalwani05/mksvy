@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKSVY</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/dataTables.min.css" />
+ 
+    <link rel="stylesheet" href="./css/dataTables.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="./css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="layer"></div>
+    <!-- ! Body -->
+    <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+    <div class="page-flex">
+        <!-- ! Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-start">
+            <div class="sidebar-head">
+              <a href="home.html" class="logo-wrapper" title="Home">
+                <div class="logo-img">
+                  <img src="img/logo-main.png" alt="" />
+                </div>
+                <!--<span class="sr-only">Home</span>-->
+                <!--<span class="icon logo" aria-hidden="true"></span>-->
+                <!--<div class="logo-text">-->
+                <!--    <span class="logo-title">MKSVY</span>-->
+                <!--    <span class="logo-subtitle">Dashboard</span> -->
+                <!--</div>-->
+              </a>
+              <button
+                class="sidebar-toggle transparent-btn"
+                title="Menu"
+                type="button"
+              >
+                <span class="sr-only">Toggle menu</span>
+                <span class="icon menu-toggle" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="sidebar-body">
+              <ul class="sidebar-body-menu">
+                <li>
+                  <a class="hovering menuLinks" href="home.html"
+                    ><i class="icon fa-solid fa-house"></i>Dashboard</a
+                  >
+                </li>
+                
+                <div class="reportCollapse">
+                  <li class="reports">
+                    <a class="menuLinks" href="javascript:void(0)">
+                      <i class="icon fa-solid fa-layer-group"></i>User Master</a>
+                  </li>
+                  <div class="arrows">
+                    <i
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-left arrowLeft"
+                    ></i>
+                    <i
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-down arrowDown"
+                    ></i>
+                  </div>
+                </div>
+                <div class="uList" style="padding-left: 22px;">
+                  <ul  class="reportList rr" style="display: none;">
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >New User</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Role Mapping</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="reportCollapse">
+                  <li class="reports">
+                    <a class="menuLinks" href="javascript:void(0)">
+                    <i id="reportModal" class="icon fa-solid fa-list"></i>Reports</a>
+                  </li>
+                  <div class="arrows">
+                    <i
+                      
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-left arrowLeft"
+                    ></i>
+                    <i
+                     
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-down arrowDown"
+                    ></i>
+                  </div>
+                </div>
+                <div class="uList" style="padding-left: 22px;">
+                  <ul  class="reportList rr" style="display: none;">
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Report 1</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Report 2</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;"class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Report 3</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Report 4</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Report 5</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="reportCollapse">
+                  <li class="reports">
+                    <a class="menuLinks" href="javascript:void(0)">
+                      <i class="icon fa-solid fa-file-contract"></i>SPVs Tendering
+                    Milestones</a>
+                  </li>
+                  <div class="arrows">
+                    <i
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-left arrowLeft"
+                    ></i>
+                    <i
+                      style="color: #ffffff; cursor: pointer; font-size: 13px"
+                      class="fa-solid fa-angle-down arrowDown"
+                    ></i>
+                  </div>
+                </div>
+                <div class="uList" style="padding-left: 22px;">
+                  <ul  class="reportList rr" style="display: none;">
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Cluster Summary</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="javascript:void(0)"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Letter Of Intent (LOI)</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="./mercAdoptionIndex.html"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >MERC Tariff Adoption Order</a
+                      >
+                    </li>
+                    <li class="hovering">
+                      <a style="font-size: 14px;" class="menuLinks" href="./LOAIndex.html"
+                        ><i
+                          style="color: #ffffffa2; font-size: 12px"
+                          class="icon fa-solid fa-circle"
+                        ></i
+                        >Letter Of Award (LOA)</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li>
+                  <a class="hovering" href="javascript:void(0)"
+                    ><i class="icon fa-solid fa-gears"></i>System Strengthening</a
+                  >
+                </li>
+                <li>
+                  <a class="hovering" href="javascript:void(0)"
+                    ><i class="icon fa-solid fa-layer-group"></i>SPDs
+                    Implementation Tracking</a
+                  >
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <div class="main-wrapper">
+            <!-- ! Main nav -->
+            <nav class="main-nav--bg">
+                <div class="container main-nav">
+                    <div class="main-nav-start">
+                        <div class="search-wrapper">
+                            <i data-feather="search" aria-hidden="true"></i>
+                            <input type="text" placeholder="Enter keywords ..." required>
+                        </div>
+                    </div>
+                    <div class="main-nav-end">
+                        <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                            <span class="sr-only">Toggle menu</span>
+                            <span class="icon menu-toggle--gray" aria-hidden="true"></span>
+                        </button>
+                        <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
+                            <span class="sr-only">Switch theme</span>
+                            <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+                            <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+                        </button>
+                        <div class="nav-user-wrapper">
+                            <button href="javascript:void(0)" class="nav-user-btn dropdown-btn" title="My profile"
+                                type="button">
+                                <span class="sr-only">My profile</span>
+                                <span class="nav-user-img">
+                                    <picture>
+                                        <source srcset="./img/avatar/avatar-illustrated-02.webp" type="image/webp"><img
+                                            src="./img/avatar/avatar-illustrated-02.png" alt="User name">
+                                    </picture>
+                                </span>
+                            </button>
+                            <ul class="users-item-dropdown nav-user-dropdown dropdown">
+                                <li><a href="javascript:void(0)">
+                                        <i data-feather="user" aria-hidden="true"></i>
+                                        <span>Profile</span>
+                                    </a></li>
+                                <li><a href="javascript:void(0)">
+                                        <i data-feather="settings" aria-hidden="true"></i>
+                                        <span>Account settings</span>
+                                    </a></li>
+                                <li><a class="danger" href="index.html">
+                                        <i data-feather="log-out" aria-hidden="true"></i>
+                                        <span>Log out</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- ! Main -->
+            <main class="main users chart-page" id="skip-target">
+                <div class="container">
+                    <h2 class="main-title">Sub Station List Within YAVATMAL</h2>
+                    <div class="row stat-cards mb-5">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body table-responsive">
+                                  <table id="tablelist" class="table-bordered table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">Taluka</th>
+                                            <th rowspan="2">S/DN</th>
+                                            <th rowspan="2" class="td-width-small">S/S Name</th>
+                                            <th rowspan="2" class="td-width-small">S/S Number</th>
+                                            <th rowspan="2" class="td-width-medium">Solar Capacity (MW)</th>
+                                            <th rowspan="2" class="td-width-medium">Land Required (Acre)</th>
+                                            <th colspan="2" class="td-width-medium">Govt Feasible Lands</th>
+                                            <th colspan="2" class="td-width-medium">Pvt Feasible Lands</th>
+                                            <th colspan="2" class="td-width-medium">Proposal Submited Lands</th>
+                                            <th colspan="2" class="td-width-medium">Possession RCVD Lands</th>
+                                            <th rowspan="2" class="td-width-medium">Useful Lands in Possession (Acre)</th>
+                                            <th rowspan="2">Status</th>
+                                            <th rowspan="2">View</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Nos</th>
+                                            <th>Acres</th>
+                                            <th>Nos</th>
+                                            <th>Acres</th>
+                                            <th>Nos</th>
+                                            <th>Acres</th>
+                                            <th>Nos</th>
+                                            <th>Acres</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="complete">Completed</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr> 
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="yet-to-start">Yet To Start</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="in-progress">In Progress</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="complete">Completed</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="complete">Completed</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arni</td>
+                                            <td>Arni S/DN.</td>
+                                            <td class="td-width-small">33 KV Arni</td>
+                                            <td class="td-width-small">304006</td>
+                                            <td class="td-width-medium">8.86</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">11.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">1</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="td-width-small">44.00</td>
+                                            <td class="complete">Completed</td>
+                                            <td><a href="land-details.html ">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row stat-cards">
+                        <div class="col-lg-12">
+                            <div class="view-details">
+                                <a href="home.html" class="primary-default-btn"> Back To Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ! Footer -->
+            <footer class="footer">
+                <div class="container footer--flex">
+                    <div class="footer-start">
+                        <p>2023 © MKSVY </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Chart library -->
+    <script src="js/jquery-3.7.0.js"></script>
+
+    <script src="./plugins/chart.min.js"></script>
+    <!-- Icons library -->
+    <script src="plugins/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js"></script>
+
+    <script src="plugins/jquery.dataTables.min.js"></script>
+    <script src="plugins/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+
+    <script>
+        (function ($) {
+            // To apply datatable
+            new DataTable('#tablelist', {
+                info: true,
+                ordering: true,
+                paging: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'excel', 'pdf', 'print'
+                ]
+            });
+        }(jQuery));
+    </script>
+
+</body>
+
+</html>
